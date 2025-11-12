@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+}
+body{
+    background: radial-gradient(circle, rgb(59,1,97),rgb(0, 0, 0));
+    overflow: hidden;
+    justify-items: center;
+    
+
+
+}
+#aitag{
+    color: #9e3af6;
+   
+}
+.logotxt{
+  font-family: "Akronim", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 2rem;
+  margin-left: 2vw;
+  margin-top: 1vh;
+  text-shadow: 0 0 2rem rgb(255, 255, 255);
+}
+
+.main{
+    width: 90vw;
+    height: 50vh;
+    color: white;
+    border: none;
+    text-align: center;
+    overflow-y: scroll;
+
+    
+}
+  
+.main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #1a1a1a; /* dark background for the track */
+  border-radius: 10px;
+}
+.main::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8a2be2, #4b0082); /* purple gradient */
+  border-radius: 10px;
+}
+.main::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #9b4dff, #6a0dad);
+}
+
+.userinputdiv{
+    width: 60vw;
+    height: 18vh;
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    border-radius: 2rem;
+    position: fixed;
+    z-index: 5;
+    margin-left: 2vw;
+    transform: translateY(-10vh); 
+    background-color: #212121c7;
+    box-shadow: 0 0 5px #8f10ff;
+}
+
+
+
+#input{
+    width: 58vw;
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 8vh;
+    margin-top: 1vh;
+    font-size: 1rem;
+    color: white;
+    margin-left: 1vw;
+}
+
+#input:focus{
+    background-color: none;
+}
+
+#heythere{
+    font-size: 2rem;
+    margin-top: 30vh;
+    text-shadow: 0 0 15px rgb(0, 0, 0);
+    font-family: "Dosis", sans-serif;
+    font-weight: 300;
+}
+
+.buttons{
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+}
+
+.buttons:hover{
+    background-color: #5e0099c7;
+}
+#imgmic{
+    transform: translateY(1vh)
+
+}
+
+.buttonsdiv{
+    display: flexbox;
+    height: 10vh;
+}
+
+
+.inline{
+    display: inline-flex;
+}
+
+#imgadddiv{
+    transform: translateX(-25vw);
+}
+#imgmicdiv{
+    transform: translate(23vw , -2vh);
+}
+#imgsend{
+    transform: translate(-0.3vh ,-0.3vw);
+}
+#imgsenddiv{
+    transform: translateX(24vw);
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    background-color: rgb(59,1,97);
+
+}
+
+#imgsenddiv:hover{
+    background-color: rgb(97, 0, 161);
+    
+
+}
+#imgadddiv{
+    transform: translateX(2vh);
+}
+#imgmicdiv{
+    transform: translate(105vh,-2vh);
+}
+#imgsenddiv{
+    transform: translateX(108vh);
+}
+
+
+
+
+
+
+
+/* Large desktops */
+@media (max-width: 1200px) {}
+
+/* Laptops / tablets */
+@media (max-width: 992px) {}
+
+/* Tablets / small laptops */
+@media (max-width: 768px) {}
+
+/* Mobile phones */
+@media (max-width: 576px) {}
