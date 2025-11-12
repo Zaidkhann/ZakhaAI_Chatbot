@@ -1,4 +1,5 @@
 from fastapi import FastAPI,Request
+from fastapi.responses import FileResponse
 from openai import OpenAI
 import uvicorn
 from dotenv import load_dotenv
@@ -75,6 +76,9 @@ IMP: If user want a code in any language like python specially in HTML give an o
 message_history = [
 {"role":"system","content":SYSTEMPROPMT}
 ]
+@app.get("/")
+async def serve_frontend():
+    return FileResponse("index.html")
 
 @app.post("/chat")
 async def llm_Response(request:Request):
