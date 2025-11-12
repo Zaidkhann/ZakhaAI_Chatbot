@@ -27,7 +27,7 @@ function sendMessage(){
     usertextdiv.style.marginLeft = "40vw"
     usertextdiv.style.marginTop = "3vh"
 
-    fetch("http://127.0.0.1:8000/chat",{
+    fetch("/chat",{
         method : "POST",
         headers :  { "Content-Type": "application/json" },
         body : JSON.stringify({message:inputText}),

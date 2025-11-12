@@ -4,6 +4,7 @@ from openai import OpenAI
 import uvicorn
 from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 import os
 
 load_dotenv()
@@ -12,11 +13,9 @@ client = OpenAI(
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 )
 app = FastAPI()
-origins = [
-    "http://localhost:5500", 
-    "http://127.0.0.1:5500", 
-   
-]
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],         
@@ -78,7 +77,8 @@ message_history = [
 ]
 @app.get("/")
 async def serve_frontend():
-    return FileResponse("index.html")
+    return FileResponse("template/index.html") 
+
 
 @app.post("/chat")
 async def llm_Response(request:Request):
